@@ -35,7 +35,21 @@ public class LibroRepository {
         return null;
     }
 
-    //buscar libro por isbn
+    public Libro buscarLibroPorIsnb(String isbn){
+
+        for(Libro libro : listaLibros){
+            if(libro.getIsbn() == isbn) return libro;
+        }
+        return null;
+    }
+    
+    public Libro buscarLibroPorAutor(String autor){
+
+        for(Libro libro : listaLibros){
+            if(libro.getAutor() == autor) return libro;
+        }
+        return null;
+    }
 
     //buscar por autor
 
