@@ -51,9 +51,12 @@ public class LibroRepository {
         return null;
     }
 
-    //buscar por autor
+    public Libro guardarLibro(Libro lib){
+        listaLibros.add(lib);
+        return lib;
+    }
 
-    public Libro actualizar(Libro lib){
+    public Libro actualizarLibro(Libro lib){
 
         int id = 0;
         int idPosicion = 0;
@@ -77,7 +80,7 @@ public class LibroRepository {
         return libro1;
     }
 
-    public void eliminar(int id){
+    public void eliminarLibro(int id){
 
         //Alternativa 1
         Libro libro = buscarLibroPorId(id);

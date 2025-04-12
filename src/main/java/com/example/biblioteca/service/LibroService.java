@@ -26,6 +26,25 @@ public class LibroService {
         return libroRepository.buscarLibroPorId(id);
     }
 
-    
+    public Libro buscarLibroPorIsbn(String isbn){
+        return libroRepository.buscarLibroPorIsnb(isbn);
+    }
+
+    public Libro buscarLibroPorAutor(String autor){
+        return libroRepository.buscarLibroPorAutor(autor);
+    }
+
+    public Libro guaLibro(Libro lib){
+        return libroRepository.guardarLibro(lib);
+    }
+
+    public Libro actualizarLibro(Libro lib){
+        return libroRepository.actualizarLibro(lib);
+    }
+
+    public String eliminarLibro(int id){
+        libroRepository.eliminarLibro(id);
+        return "Libro eliminado";
+    }
 
 }
