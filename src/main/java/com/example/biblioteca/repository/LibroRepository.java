@@ -50,7 +50,17 @@ public class LibroRepository {
                 idPosicion = i;
             }
         }
-        return null;
+        
+        Libro libro1 = new Libro();
+        libro1.setId(id);
+        libro1.setTitulo(lib.getTitulo());
+        libro1.setAutor(lib.getAutor());
+        libro1.setFechaPublicacion(lib.getFechaPublicacion());
+        libro1.setEditorial(lib.getEditorial());
+        libro1.setIsbn(lib.getIsbn());
+
+        listaLibros.set(idPosicion,libro1);
+        return libro1;
     }
 
 }
