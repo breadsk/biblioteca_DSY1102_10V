@@ -36,7 +36,7 @@ public class LibroRepository {
     }
 
     public Libro buscarLibroPorIsnb(String isbn){        
-        System.out.println("Estoy recibiendo como parametro: " + isbn);
+        
         for(Libro libro : listaLibros){            
             if(libro.getIsbn().equals(isbn)){
                 return libro;
@@ -48,7 +48,7 @@ public class LibroRepository {
     public Libro buscarLibroPorAutor(String autor){
 
         for(Libro libro : listaLibros){
-            if(libro.getAutor() == autor) return libro;
+            if(libro.getAutor().equals(autor)) return libro;
         }
         return null;
     }

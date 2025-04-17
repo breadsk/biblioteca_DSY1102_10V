@@ -34,7 +34,7 @@ public class LibroService {
         return libroRepository.buscarLibroPorAutor(autor);
     }
 
-    public Libro guaLibro(Libro lib){
+    public Libro guardarLibro(Libro lib){
         return libroRepository.guardarLibro(lib);
     }
 
