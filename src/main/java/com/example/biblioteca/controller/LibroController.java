@@ -6,6 +6,7 @@ import com.example.biblioteca.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +26,11 @@ public class LibroController {
     @GetMapping
     public List<Libro> obtenerLibros() {
         return libroService.obtenerLibros();
+    }
+    
+    @GetMapping("{id}")
+    public Libro buscarLibroPorId(@PathVariable int id) {
+         return libroService.buscarLibroPorId(id);
     }
     
 
