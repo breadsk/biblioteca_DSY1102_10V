@@ -35,10 +35,12 @@ public class LibroRepository {
         return null;
     }
 
-    public Libro buscarLibroPorIsnb(String isbn){
-
-        for(Libro libro : listaLibros){
-            if(libro.getIsbn() == isbn) return libro;
+    public Libro buscarLibroPorIsnb(String isbn){        
+        System.out.println("Estoy recibiendo como parametro: " + isbn);
+        for(Libro libro : listaLibros){            
+            if(libro.getIsbn().equals(isbn)){
+                return libro;
+            }
         }
         return null;
     }

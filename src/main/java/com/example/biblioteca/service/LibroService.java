@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.HashMap;
+//import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+//import java.util.Map;
 
 @Service
 public class LibroService {
@@ -26,7 +26,7 @@ public class LibroService {
         return libroRepository.buscarLibroPorId(id);
     }
 
-    public Libro buscarLibroPorIsbn(String isbn){
+    public Libro buscarLibroPorIsbn(String isbn){                
         return libroRepository.buscarLibroPorIsnb(isbn);
     }
 
